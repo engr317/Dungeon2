@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
+using System.Media;
 using DungeonLibrary;
 using MonsterLIbrary;
 
@@ -17,15 +19,19 @@ namespace DungeonApplication
 
             //1 TODO Create a Player
 
-            Weapon sword = new Weapon("Short Sword", 1, 6, 0, false);
-
-            //MINI-LAB! Create another weapon and display it to the screen
+            Weapon sword = new Weapon("Short Sword", 1, 6, 0, false);            
             Weapon vorpalSword = new Weapon("Vorpal Sword", 12, 24, 5, true);
-
-            //Console.WriteLine(sword);
-            //Console.WriteLine(vorpalSword);
+            Weapon slingshot = new Weapon("Sling Shot", 1, 3, 50, true);
+            Weapon doubleAxe = new Weapon("Double Bladed Axe", 5, 15, 0, true);
+            Weapon battleStaff = new Weapon("Staff of Enlightenment", 10, 20, 9, true);
+            Weapon Bow = new Weapon("Bow", 5, 5, 9, true);
+            
 
             Player player = new Player("Leeeeeerooooy Jenkins!!!", 15, 15, 10, 5, sword, Race.Elf);
+            Player Player2 = new Player("Player2", 10, 15, 10, 2, slingshot, Race.Troll);
+            Player Player3 = new Player("Ranger", 20, 20, 10, 5, sword, Race.Human);
+            Player Player4 = new Player("Gandalf the White", 10, 10, 5, 5, battleStaff, Race.Human);
+            Player Player5 = new Player("Ragnor Lothbrok", 10, 10, 8, 8, doubleAxe, Race.Human);
 
             Console.WriteLine(player);
             Console.WriteLine();
@@ -39,12 +45,29 @@ namespace DungeonApplication
                 //3 TODO write a method for getting room descriptions
                 Console.WriteLine(GetRoom());
                 //4 TODO Create a Monster in the room
-                Demon d1 = new Demon("Imp", 10, 10, 3, 12, 1, 6, "A small, flying demon with a barbed tail", 55);
-                Demon d2 = new Demon("Summoner", 15, 15, 5, 10, 2, 8, "Summons other demons", 0);
+                Demon d1 = new Demon("Imp", 10, 10, 3, 12, 1, 6, "A small, flying demon w- barbed tail", 55);
+
+                Demon d2 = new Demon("Changeling", 15, 15, 5, 10, 2, 8, "This sensual magical girl's deep-set eyes are the color of wild moss and her neck-length, straight, silky, black hair is worn in a complex style. She has a busty build. She has avian powers that are invoked by concentration. Her costume is yellow and black, and it strongly resembles a french maid's uniform.", 0);
+
+                Demon d3 = new Demon("Chiuahua", 10, 10, 2, 10, 4, 8, "This conceited warlock is spurred onward by religious fanaticism. He employs necromancy in his plots, usually ressurecting the dead to gain their knowledge to achieve his goals. He has a peculiar affinity for magical items.", 7);
+
+                Demon d4 = new Demon("Ghost", 15, 15, 5, 10, 2, 8, "This chaste sorceress is motivated by greed. She uses high magic in her schemes, commonly taking over instutitions of magical training to achieve her goals. She is from an unusual family line.", 0);
+
+                Demon d5 = new Demon("Death Eater", 15, 15, 5, 10, 2, 8, "This cute magic-user is motivated by greed. She uses demonology in her plots, commonly kidnapping important magic-users to achieve her goals. She has little money.", 0);
+
+                Demon d6 = new Demon("Wraith", 15, 15, 5, 10, 2, 8, "This ugly warlock is motivated by egotism. He uses necromancy in his plots, commonly stealing the souls of political leaders to achieve his goals. He has a peculiar affinity for magic.", 0);
+
+                Demon d7 = new Demon("Firey Poodle", 15, 15, 5, 10, 2, 8, "The social female half-Satyr poacher who is prone to odd statements. She has a muscular build. Her wardrobe is utilitarian. Her non-human ancestry is very obvious and not-concealable, but not particuarly disturbing.", 0);
+
+                Demon d8 = new Demon("Zombie", 15, 15, 5, 10, 2, 8, "Summons other demons", 0);
+
+                Demon d9 = new Demon("Porcelain Doll", 15, 15, 5, 10, 2, 8, "This goddess of famine takes the form of a mature woman. She is short and has a plump build. Her eyes are sunken, like those of a corpse. She has lemon-yellow skin. She is usually portrayed as wearing a dignified uniform made from the skin of a dead god, and various ornaments. She carries an axe. She can starve a person to death with a touch.", 0);
+
+                Demon d10 = new Demon("Ninja", 15, 15, 5, 10, 2, 8, "This vicious ninja has a lean build. He has burn marks on his body. His narrow eyes are white. He has medium-length jade-colored hair worn in a straightforward style. He uses an elaborate form of martial arts that emphasizes breaking an opponent's bones and using headbutting. His preferred weapon is a spear. He is skilled in interrogation and cryptography. He uses his martial arts to produce gravitic disturbances.", 0);
 
                 Monster[] monsters =
                 {
-                    d1, d1, d1, d2
+                    d1, d3, d1, d2, d4, d5, d6, d7, d8, d9, d10
                 };
 
                 Monster monster = monsters[new Random().Next(monsters.Length)];

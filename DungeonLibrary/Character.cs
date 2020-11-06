@@ -30,19 +30,12 @@ namespace DungeonLibrary
             Life = life;
             Block = block;
             HitBonus = hitBonus;
-        }
-
-        //We won't write a ToString() because we will out unique outputs for the Player and Monster Classes
+        }        
 
         public virtual int CalcBlock()
         {
             return Block;
-        }
-
-        //MINI-LAB!
-        //Build the CalcHitBonus to return HitBonus
-        //and CalcDamage method to return 0.
-        //Make it to where we can change it later in our child classes. 
+        }         
 
         public virtual int CalcHitBonus()
         {
