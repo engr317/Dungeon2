@@ -84,9 +84,7 @@ namespace DungeonLibrary
                 Name,
                 MinDamage,
                 MaxDamage,
-                BonusHitChance,
-                //MINI-LAB!
-                //Build a ternary operator that displays whether or not the weapon is two-handed:
+                BonusHitChance,                
                 IsTwoHanded ? "Two-Handed" : "One-Handed");
         }
     }
