@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DungeonLibrary
 {
-    class Weapon
+    public class Weapon
     {
         /*
          * min max Damage

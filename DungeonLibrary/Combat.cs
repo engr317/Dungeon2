@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DungeonLibrary
 {
-    class Combat
+    public class Combat
     {
         public static void DoAttack(Character attacker, Character defender)
         {
