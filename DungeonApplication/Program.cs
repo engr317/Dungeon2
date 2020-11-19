@@ -15,14 +15,10 @@ namespace DungeonApplication
     {
         static void Main(string[] args)
         {
+                 
 
-            //var myplayer = new System.Media.SoundPlayer();
-            //myplayer.SoundLocation = @"d:\...........";
-            //myplayer.PlayLooping();
-
-            //var myplayer = new System.Media.SoundPlayer();
-            //myplayer.SoundLocation = Properties.Resources.looperman;
-            //myplayer.PlayLooping();
+            var myplayer = new SoundPlayer(Properties.Resources.looperman);
+            myplayer.PlayLooping();
 
 
             WriteLine(@"
@@ -119,7 +115,7 @@ namespace DungeonApplication
                             Combat.DoBattle(player, monster);
                             if (monster.Life <= 0)
                             {
-                                Console.ForegroundColor = ConsoleColor.Green;
+                                Console.ForegroundColor = ConsoleColor.Cyan;
                                 Console.WriteLine("You killed the {0}!", monster.Name);
                                 System.Threading.Thread.Sleep(2000);
                                 Console.ResetColor();
@@ -157,11 +153,9 @@ namespace DungeonApplication
                         default:
                             Console.WriteLine("That's not an option. Please try again");
                             break;
-                    }//end of switch
+                    }//end of switch                 
 
-                    //15 TODO Check Players life
-
-                    //16 TODO If they died end application
+                    
 
                     //17 TODO Keep looping through if they're alive
                     if (player.Life <= 0)
