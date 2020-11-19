@@ -7,6 +7,7 @@ using System.Threading;
 using System.Media;
 using DungeonLibrary;
 using MonsterLIbrary;
+using static System.Console;
 
 namespace DungeonApplication
 {
@@ -14,8 +15,30 @@ namespace DungeonApplication
     {
         static void Main(string[] args)
         {
-            Console.Title = "Dungeon of Doom";
-            Console.WriteLine("Your journey begins...\n");
+
+            //var myplayer = new System.Media.SoundPlayer();
+            //myplayer.SoundLocation = @"d:\...........";
+            //myplayer.PlayLooping();
+
+            //var myplayer = new System.Media.SoundPlayer();
+            //myplayer.SoundLocation = Properties.Resources.looperman;
+            //myplayer.PlayLooping();
+
+
+            WriteLine(@"
+ __| |____________________________________________| |__
+(__   ____________________________________________   __)
+   | |                                            | |
+   | |                                            | |
+   | |             Dungeon of Doom                | |
+   | |                                            | |
+   | |                                            | |
+   | |          Your journey begins...            | |
+ __| |____________________________________________| |__
+(__   ____________________________________________   __)
+   | |                                            | |
+
+");            
 
             //1 TODO Create a Player
 
