@@ -47,7 +47,7 @@ namespace DungeonApplication
             
 
             Player player = new Player("Leeeeeerooooy Jenkins!!!", 15, 15, 10, 5, sword, Race.Elf);
-            Player Player2 = new Player("Player2", 10, 15, 10, 2, slingshot, Race.Troll);
+            Player Player2 = new Player("Blarg", 10, 15, 10, 2, slingshot, Race.Troll);
             Player Player3 = new Player("Ranger", 20, 20, 10, 5, sword, Race.Human);
             Player Player4 = new Player("Gandalf the White", 10, 10, 5, 5, battleStaff, Race.Human);
             Player Player5 = new Player("Ragnor Lothbrok", 10, 10, 8, 8, doubleAxe, Race.Human);
@@ -55,15 +55,26 @@ namespace DungeonApplication
             Console.WriteLine(player);
             Console.WriteLine();
 
-            //TODONE Create a loop for the room
+            //create character selection
+
+
+
+
+            //create weapon selection
+
+
+
+
+
+            
             bool exit = false;
 
             do
             {
                 //enter a room
-                //3 TODO write a method for getting room descriptions
+               
                 Console.WriteLine(GetRoom());
-                //4 TODO Create a Monster in the room
+                
                 Demon d1 = new Demon("Imp", 10, 10, 3, 12, 1, 6, "A small, flying demon w- barbed tail", 55);
 
                 Demon d2 = new Demon("Changeling", 15, 15, 5, 10, 2, 8, "This sensual magical girl's deep-set eyes are the color of wild moss and her neck-length, straight, silky, black hair is worn in a complex style. She has a busty build. She has avian powers that are invoked by concentration. Her costume is yellow and black, and it strongly resembles a french maid's uniform.", 0);
