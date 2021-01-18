@@ -44,8 +44,8 @@ namespace DungeonApplication
             Weapon doubleAxe = new Weapon("Double Bladed Axe", 5, 15, 0, true);
             Weapon battleStaff = new Weapon("Staff of Enlightenment", 10, 20, 9, true);
             Weapon Bow = new Weapon("Bow", 5, 5, 9, true);
-            
 
+            
             Player player = new Player("Leeeeeerooooy Jenkins!!!", 15, 15, 10, 5, sword, Race.Elf);
             Player Player2 = new Player("Blarg", 10, 15, 10, 2, slingshot, Race.Troll);
             Player Player3 = new Player("Ranger", 20, 20, 10, 5, sword, Race.Human);
@@ -55,8 +55,8 @@ namespace DungeonApplication
             Console.WriteLine(player);
             Console.WriteLine();
 
-            //create character selection
 
+            //create character selection
 
 
 
@@ -66,7 +66,7 @@ namespace DungeonApplication
 
 
 
-            
+
             bool exit = false;
 
             do
@@ -136,7 +136,7 @@ namespace DungeonApplication
                             }
                             break;
                         case ConsoleKey.R:
-                            //10 TODO If player Runs
+                            
                             Console.WriteLine("RUN AWAY!");
                             int blockedIn = new Random().Next(1);
                             if (blockedIn == 1)
